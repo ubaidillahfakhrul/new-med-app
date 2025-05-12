@@ -1,5 +1,5 @@
 import './Navbar.css';
- 
+import { Link } from 'react-router-dom'; // Import Link dari react-router-dom 
 
 function Navbar () {
     const handleClick = () => {
@@ -51,15 +51,21 @@ function Navbar () {
           </li>
           {/* <!-- List item for the 'Sign Up' link with a button --> */}
           <li class="link">
-            <a href="../Sign_Up//Sign_Up.html">
+            <Link to="/sign_up">
+                <button className='btn1'>Sign Up</button>
+            </Link>
+            {/* <a href="../Sign_Up//Sign_Up.html">
               <button class="btn1">Sign Up</button>
-            </a>
+            </a> */}
           </li>
           {/* <!-- List item for the 'Login' link with a button --> */}
           <li class="link">
-            <a href="../Login/Login.html">
+            <Link to="/login">
+                <button className="btn1">Login</button>
+            </Link>
+            {/* <a href="./Login.js">
               <button class="btn1">Login</button>
-            </a>
+            </a> */}
           </li>
         </ul>
     </nav>
